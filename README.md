@@ -19,13 +19,7 @@ class StudentNode{
 ```
 
 ## File I/O in C++
-Consult the <a href="https://www.cplusplus.com/reference/fstream/ifstream/">ifstream</a> and  <a href="https://www.cplusplus.com/reference/fstream/ofstream/ofstream/">ofstream</a> classes for C++ File I/O 
-A doubly linked list is a linked list that contains a previous and a next pointer. In this assignment, the head is a dummy node and its previous pointer should be null. The tail is not a dummy node, but its next pointer is null.
-<br>
-<br>
-<img src="doublylinked.svg">
-<br>
-We will work through insertion during the lab.
+Consult the <a href="https://www.cplusplus.com/reference/fstream/ifstream/">ifstream</a> and  <a href="https://www.cplusplus.com/reference/fstream/ofstream/ofstream/">ofstream</a> reference page for C++ File I/O.
 
 
 # Instructions 
