@@ -98,9 +98,7 @@ int main(){
 		Total credits
 		...
 		```	
-		
-	The default file name for the ouput file should be `composite_student_list.txt` unless otherwise specified by the user through the command line (more on this later). 
-	- 
+		The default file name for the ouput file should be `composite_student_list.txt` unless otherwise specified by the user through the command line 		(more on this later). 
 	- In this lab, you will be utilizing the command line to pass in flags (or options) to your program for performing a variety of tasks.
 		1. Implement a `-f` flag to specify a single student file ID to be read into memory. 
 			 - For example `./prog -f student_1.txt` this will load data from the file entitled `student_1.txt` into a node and write the list to a 			   file named `composite_student_list.txt`.
