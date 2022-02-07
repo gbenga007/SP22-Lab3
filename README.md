@@ -87,7 +87,7 @@ int main(){
 	- Implement a function to print list to standard out using the following format:
 			- ```Student Name: #####\nGPA: #####\nTotal credits: ####```
 				- Replace the hashes with the actual data. 
-	- Implement a function to print the contents of the list with the following format:
+	- Implement a function to print the contents of the list to a file with the following format:
 		``` 		
 		Name
 		GPA
@@ -102,13 +102,13 @@ int main(){
 	- In this lab, you will be utilizing the command line to pass in flags (or options) to your program for performing a variety of tasks.
 		1. Implement a `-f` flag to specify a single student file ID to be read into memory. 
 			 - For example `./prog -f student_1.txt` this will load data from the file entitled `student_1.txt` into a node and write the list to a 			   file named `composite_student_list.txt`.
-		2. Implement a `-r` flag to specify a range of student file ID's to be read into memory.
-			 - For example `./prog -r 1-5` this will load data from the files entitled `student_1.txt` through `student_5.txt` into independent nodes 			     which will be linked together. 
+		2. Implement a `-r` flag to specify a range of student file IDs to be read into memory.
+			 - For example `./prog -r 1-5` this will load data from the files entitled `student_1.txt` through `student_5.txt` into independent nodes 			     which will be linked together. The resulting linked list should be printed to a file named `composite_student_list.txt` unless otherwise 				 specified.
 		3. Implement a `-o` flag to specify an output file name. By default, the output file should be called `composite_student_list.txt`.
-		4. Implement a `-i` flag for Node insertion. This flag should support two(2) or one (1) argument(s). If only one argument is passed in, it should 		             first, check to see if a file named `composite_student_list.txt` exisits. If it does, it appends a node at the end of the list generated 				 from the file and it updates the file. Ensure that the student doesn't already exisit in the list before appending. If only one argument 			     is passed, it should function in the same manner as the `-f` flag.
-		5. Implement a `-d` flag. This command line option should delete a student node by name in the list generated from `composite_student_list.txt`.
-		6. Implement a `-h` flag which prints the programs usage. 
-		7. In the event of an invalid or insufficient command line, print a meaningful error message such as `-q` flag is not supported **OR** `-f` flag 		   expects an accompanying file name for read.  print the programs usage.
+		4. Implement a `-i` flag for Node insertion. This flag should support two(2) or one (1) argument(s). If only one argument is passed in, it should 		             first, check to see if a file named `composite_student_list.txt` exisits. If it does, it appends a node at the end of the list generated 				 from the file and it updates the file. Ensure that the student doesn't already exist in the list before appending. If two arguments 			           are passed, it should operate as `-i src_file dest_file`. Where the list is generated using `src_file` and the contents of `dest_file` 			     shoulde be appended to the generated list.
+		5. Implement a `-d` flag. This command line option should delete a student node by name in the list generated from `composite_student_list.txt`. 		            The list is updated following student deletion.
+		6. Implement a `-h` flag which prints the programs usage. That is, it prints how the program may be executed.
+		7. In the event of an invalid or insufficient command line, print a meaningful error message such as:  `-q` flag is not supported **OR** `-f` flag 		   		expects an accompanying file name for read operation.  Following this, print the programs usage.
 	
 4. Dynamically allocate students and nodes with C++'s `new` keyword.
 5. Read and internalize the warnings.
