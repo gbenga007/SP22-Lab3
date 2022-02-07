@@ -76,7 +76,7 @@ int main(){
 3. Create a header and implementation file for a studentList. 
 	- Define a C++ class for a student Node following the above example.
 	- Your class should include a default constructor which just creates an instance of the class with all data members set to null.
-	- Since, the data for the Linked List will be read in from a file, you should also implement a constructor which takes in a file name as a parameter. 
+	- Since the data for the Linked List will be read in from a file, you should also implement a constructor which takes in a file name as a parameter. 
 		- This constructor should go through every student in the file and create and link a node for each respective student.
 	- Each student file will follow this format:
 		``` 
@@ -108,7 +108,7 @@ int main(){
 		4. Implement a `-i` flag for Node insertion. This flag should support two(2) or one (1) argument(s). If only one argument is passed in, it should 		             first, check to see if a file named `composite_student_list.txt` exisits. If it does, it appends a node at the end of the list generated 				 from the file and it updates the file. Ensure that the student doesn't already exist in the list before appending. If two arguments 			           are passed, it should operate as `-i src_file dest_file`. Where the list is generated using `src_file` and the contents of `dest_file` 			     shoulde be appended to the generated list.
 		5. Implement a `-d` flag. This command line option should delete a student node by name in the list generated from `composite_student_list.txt`. 		            The list is updated following student deletion.
 		6. Implement a `-h` flag which prints the programs usage. That is, it prints how the program may be executed.
-		7. In the event of an invalid or insufficient command line, print a meaningful error message such as:  `-q` flag is not supported **OR** `-f` flag 		   		expects an accompanying file name for read operation.  Following this, print the programs usage.
+		7. In the event of an invalid or insufficient command line, print a meaningful error message such as:  `-q` flag is not supported **OR** `-f` flag 		   		expects an accompanying file name for read operation.  Following this, print the program's usage.
 	
 4. Dynamically allocate students and nodes with C++'s `new` keyword.
 5. Read and internalize the warnings.
