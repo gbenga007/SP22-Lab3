@@ -36,7 +36,7 @@ We will work through insertion during the lab.
 - Itemized directions are below. You may not have to do them in order.
 
 1. Read and internalize the warnings.
-2. Create a `main.cpp` OR `main.cc` file. N.B: The C++ compiler recognizes either extension for Cplusplus source code files.
+2. Create a `main.cpp` OR `main.cc` file. **N.B**: The C++ compiler recognizes either extension for Cplusplus source code files.
 	- Include the `argc` and `argv` arguments. For this assignment, you will be reading the node data from a text file called `students.txt`. Use the command line args to pass in the file name.  
 3. Create a header and implementation file for a studentList. 
 	- Define a C++ class for a student Node.
