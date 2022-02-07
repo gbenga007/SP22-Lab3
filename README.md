@@ -5,16 +5,14 @@ For your lab this week, you will be constructing a singly linked list using a C+
 # Preliminaries 
 ## A short primer on Singly Linked Lists
 ```c++
-class Node{
+class StudentNode{
   public : 
         std::string  Name;
 	float         GPA;
 	int Total credits;
-        Node* next;
-        Node()
-        {}
-        Node(std::string fileName) 
-        {}
+        StudentNode* next;
+        StudentNode();
+        StudentNode(std::string fileName);
 
 };
 
@@ -32,19 +30,19 @@ A doubly linked list is a linked list that contains a previous and a next pointe
 We will work through insertion during the lab.
 
 
-# Instructions
-- You are given an empty repository with this readme. 
+# Instructions 
 - Make commits as often as necessary, with self-contained bits of code rather than large blobs. ***You do not need to push after each commit.***
 - **Read and internalize the warnings.**
 - Itemized directions are below. You may not have to do them in order.
 
 1. Read and internalize the warnings.
-2. Create a `main.cpp` OR `main.cc` file. The C++ compiler recognizes either extension for Cplusplus source code files.
-	- Include the `argc` and `argv` arguments. For this assignment, you will be reading the node data from a text file. Use the command line args to pass in the file.  
-	- Hard code 10 students to use in your doubly linked list.
+2. Create a `main.cpp` OR `main.cc` file. N.B: The C++ compiler recognizes either extension for Cplusplus source code files.
+	- Include the `argc` and `argv` arguments. For this assignment, you will be reading the node data from a text file called `students.txt`. Use the command line args to pass in the file name.  
 3. Create a header and implementation file for a studentList. 
-	- Implement doubly linked list methods for students.
-	- Create the actual doubly linked list in `main`.
+	- Define a C++ class for a student Node.
+	- Your class should include a default constructor which just creates an instance of the class with all data members set to null.
+	- Since, the data for the Linked List will be read in from a file, you should also implement a constructor which takes in a file name as a parameter. 
+		- This constructor should go through every student in the file and create and link a node for each respective student.
 	- Use a struct to contain the data necessary for a student.
 		- Name
 		- GPA
@@ -62,7 +60,7 @@ We will work through insertion during the lab.
 		2. Deletion by specifying the index, and handling the head, tail, or anything in between.
 			- Specify an integer.
 			- Delete the student node at the given integer.
-			- Prove the student was deleted inside the method. You may achieve this with a `printf` statement.
+			- Prove the student was deleted inside the method. You may achieve this with an `std::cput` statement.
 		3. Deletion of all items in the list.
 		4. Add at end by specifying a student struct.
 		5. Insertion by specifying the index and student struct. This will not insert at the end.
@@ -81,8 +79,7 @@ We will work through insertion during the lab.
 5. Read and internalize the warnings.
 6. Test all of your functions in `main`.
 7. Verify that you may give your program an integer argument to delete students from the doubly linked list. prove that it works.
-8. Add error handling, such as if-else statements that use `printf` to write warnings to the console.
-9. Don't use `malloc` for this assignment, since it may lead to memory issues that will reduce your grade.
+8. Add error handling, such as if-else statements that use `std::cout` to write warnings to the console.
 10. Paste your terminal output from the assignment onto the end of this document.
 		
 		
