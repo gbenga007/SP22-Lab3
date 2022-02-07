@@ -27,7 +27,7 @@ An example:
 
 int main(){
 	
-	std::ifstream ifs;
+	std::ifstream ifs; //  std::ofstream ofs -- output filestream object
 	ifs.open("myfile.bin", ios::in | ios::binary); 
 	// This will open a file named `myfile.txt' 
 	// `ios::in` -- this sets up the stream for input operations -- 
@@ -37,6 +37,7 @@ int main(){
 	 // Let's read in some data.
 	 int num; // assuming we have some integer value to read in.
 	 ifs >> num; // We use the stream extraction operator `>>` to extract data from the stream.
+	 	     // You may use the stream insertion operator `<<` to insert data into an ofstream object.
 	  // The fstream object has a set of flags we can query to check if read-write operations were succesful.
 	 
 	   /* 1.) badbit - checked with ifs.bad(). This returns true if reading or writing operations fail. The failure here is with regards to
@@ -55,6 +56,7 @@ int main(){
 	   */
 	
 	}
+	ifs.close(); // close the file stream
 	
 
 	return 0;
