@@ -3,7 +3,7 @@ For your lab this week, you will be constructing a singly linked list using a C+
 
 
 # Preliminaries 
-## A short primer on Singly Linked Lists
+You should your linked list node should be constructed using the following class.
 ```c++
 class StudentNode{
   public : 
@@ -18,10 +18,8 @@ class StudentNode{
 
 ```
 
-
-
 ## File I/O in C++
-Consult the ifstream and ofstream classes for C++ File I/O 
+Consult the <a href="https://www.cplusplus.com/reference/fstream/ifstream/">ifstream</a> and  <a href="https://www.cplusplus.com/reference/fstream/ofstream/ofstream/">ofstream</a> classes for C++ File I/O 
 A doubly linked list is a linked list that contains a previous and a next pointer. In this assignment, the head is a dummy node and its previous pointer should be null. The tail is not a dummy node, but its next pointer is null.
 <br>
 <br>
