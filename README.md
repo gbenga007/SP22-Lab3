@@ -1,5 +1,5 @@
 # Lab 3: Constructing Singly Linked Lists using C++ Classes
-For your lab this week, you will be constructing a singly linked list using a C++ class. This lab will serve as a soft introduction to programming in C++. Your task is to implement something similar to what you did for Lab2 (perhaps even simpler, since it'll be a singly linked list instead of a doubly linked list) however, you will be using a C++ class object for your linked list nodes.
+For your lab this week, you will be constructing a singly linked list using a C++ class. This lab will serve as a soft introduction to programming in C++. Your task is to implement something similar to what you did for Lab2 (perhaps even simpler, since it'll be a singly linked list instead of a doubly linked list) however, you will be using a C++ class object for your linked list nodes. You will also be performing File I/O for the reading in the data for your linked list nodes.
 
 
 # Preliminaries 
@@ -8,8 +8,8 @@ For your lab this week, you will be constructing a singly linked list using a C+
 class Node{
   public : 
         std::string  Name;
-		    float         GPA;
-		    int Total credits;
+	float         GPA;
+	int Total credits;
         Node* next;
         Node()
         {}
