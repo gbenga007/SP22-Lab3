@@ -39,11 +39,20 @@ int main(){
 	 ifs >> num; // We use the stream extraction operator `>>` to extract data from the stream.
 	  // The fstream object has a set of flags we can query to check if read-write operations were succesful.
 	 
-	   /* 1.) badbit - checked with ifs.bad() - This returns true if reading or writing operations fail. The failure here is with regards to
-	      The buffer associated with the stream. In other words, if we try to write to a file that is not open for writing or if we attempt
-	       writing to a device that has no space left.
+	   /* 1.) badbit - checked with ifs.bad(). This returns true if reading or writing operations fail. The failure here is with regards to
+	      		   The buffer associated with the stream. In other words, if we try to write to a file that is not open for writing or 
+			   if we attemptwriting to a device that has no space left.
 	       
-	`.    2.) Failbit - checked with ifs.fail() -
+	`.    2.) Failbit - checked with ifs.fail() - trigerred in the same cases as  ifs.bad(). However, it's also set to true when there is a
+			    format error. For example, attempting to extract an integer from the stream into an alphabetical character.
+			    
+	      3.) eofbit     - end of file - checked with ifs.eof(). This returns true if a file open for reading has reached the end of the file.
+	      
+	      4.) goodbit     - checked with ifs.good(). Returns false in the same cases where all others return true. 
+	      
+	      You may also use the NOT (bang) operator `!` which returns true if either failbit or badbit is set to true.
+	
+	   */
 	
 	}
 	
