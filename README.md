@@ -3,14 +3,14 @@ For your lab this week, you will be constructing a singly linked list using a C+
 
 
 # Preliminaries 
-You should your linked list node should be constructed using the following class.
+Your linked list node should be constructed using the following class.
 ```c++
 class StudentNode{
   public : 
-        std::string  Name;
-	float         GPA;
-	int Total credits;
-        StudentNode* next;
+        std::string  name_;
+	float         gpa_;
+	int totalCredits_;
+        StudentNode* next_;
         StudentNode();
         StudentNode(std::string fileName);
 
@@ -27,7 +27,7 @@ An example:
 
 int main(){
 	
-	std::ifstream ifs; //  std::ofstream ofs -- output filestream object
+	std::ifstream ifs; //  std::ofstream ofs -- output file stream object
 	ifs.open("myfile.bin", ios::in | ios::binary); 
 	// This will open a file named `myfile.txt' 
 	// `ios::in` -- this sets up the stream for input operations -- 
@@ -73,20 +73,32 @@ int main(){
 2. Create a `main.cpp` OR `main.cc` file. **N.B**: The C++ compiler recognizes either extension for Cplusplus source code files.
 	- Include the `argc` and `argv` arguments. For this assignment, you will be reading the node data from a text file called `students.txt`. Use the command line args to pass in the file name.  
 3. Create a header and implementation file for a studentList. 
-	- Define a C++ class for a student Node.
+	- Define a C++ class for a student Node following the above example.
 	- Your class should include a default constructor which just creates an instance of the class with all data members set to null.
 	- Since, the data for the Linked List will be read in from a file, you should also implement a constructor which takes in a file name as a parameter. 
 		- This constructor should go through every student in the file and create and link a node for each respective student.
-	- Use a struct to contain the data necessary for a student.
-		- Name
-		- GPA
-		- Total credits
-	- Use a struct to contain the data necessary for a student node in a doubly linked list.
-		- Student
-		- next
-		- prev
-	- Use a dummy `head` node. For index operations, treat the dummy head node as 0.
-	- Your `tail` pointer should not be a dummy.
+	- Each student file will follow this format:
+		Name
+		GPA
+		Total credits
+	- Implement a function to print list to standard out.
+	- Implement a function to print the contents of the list with the following format:
+		Name
+		GPA
+		Total credits
+		
+		Name
+		GPA
+		Total credits
+		...
+	The default file name for the ouput file should be `composite_student_list.txt` unless specified by the user through the command line (more on this later). 
+	- 
+	- In this lab, you will be utilizing the command line to pass in flags or options to your program for performing a variety of tasks.
+		1. Implement a `-f` flag to specify a single student file ID to be read into memory. 
+			 - For example `./prog -f 1` this will load data from the file entitled `student_1.txt` into a node.
+		2. Implement a `-r` flag to specify a range of student file ID's to be read into memory.
+			 - For example `./prog -r 1-5` this will load data from the files entitled `student_1.txt` through `student_5.txt` into independent nodes 			     which will be linked together. 
+		3. Implement a  `-o` flag to specify an output file name. By default, the output file should be called `composite_student_list.txt`.
 	- Implement the following operations. You will need to pass the head to these methods.
 		1. Index at.
 			- Specify an integer.
@@ -144,7 +156,7 @@ The instructors should be able to run the code by invoking the executable, `./li
 - Do not use `malloc` in this assignment. Use C++'s `new` and `delete` keyword for heap memory management instead.
 - Test all of your functions in `main`.
 - Use some sort of error handling, such as if-else statements that use `std::cout` to write warnings to the console.
-- Do not assume the number of items in your singly linked list.
+- Be sure to perform substantial error checking on the command line options.
 
 Example valgrind output that would not result in a loss of points:
 ```
