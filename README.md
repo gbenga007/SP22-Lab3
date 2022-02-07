@@ -83,7 +83,9 @@ int main(){
 		GPA
 		Total credits
 		```
-	- Implement a function to print list to standard out.
+	- Implement a function to print list to standard out using the following format:
+			- ```Student Name: #####\nGPA: #####\nTotal credits: ####```
+				- Replace the hashes with the actual data. 
 	- Implement a function to print the contents of the list with the following format:
 		``` 
 		Name
@@ -94,37 +96,21 @@ int main(){
 		GPA
 		Total credits
 		...
-		...
+		
+		```
 	The default file name for the ouput file should be `composite_student_list.txt` unless specified by the user through the command line (more on this later). 
 	- 
 	- In this lab, you will be utilizing the command line to pass in flags or options to your program for performing a variety of tasks.
 		1. Implement a `-f` flag to specify a single student file ID to be read into memory. 
-			 - For example `./prog -f 1` this will load data from the file entitled `student_1.txt` into a node.
+			 - For example `./prog -f 1` this will load data from the file entitled `student_1.txt` into a node and write the list to a file named 				  `composite_student_list.txt`.
 		2. Implement a `-r` flag to specify a range of student file ID's to be read into memory.
 			 - For example `./prog -r 1-5` this will load data from the files entitled `student_1.txt` through `student_5.txt` into independent nodes 			     which will be linked together. 
-		3. Implement a  `-o` flag to specify an output file name. By default, the output file should be called `composite_student_list.txt`.
-	- Implement the following operations. You will need to pass the head to these methods.
-		1. Index at.
-			- Specify an integer.
-			- Return the student node at the given integer.
-		2. Deletion by specifying the index, and handling the head, tail, or anything in between.
-			- Specify an integer.
-			- Delete the student node at the given integer.
-			- Prove the student was deleted inside the method. You may achieve this with an `std::cput` statement.
-		3. Deletion of all items in the list.
-		4. Add at end by specifying a student struct.
-		5. Insertion by specifying the index and student struct. This will not insert at the end.
-			- Let head be the 0 index.
-			- The given integer is where the new node will be.
-			- Specify an integer and student struct.
-			- Add the student at the given integer.
-		6. Print student.
-			- Specify an integer.
-			- Use `printf` to print the student at the given index. 
-			- Print in this format: 
-			- ```Student Name: #####\nGPA: #####\nTotal credits: ####```
-				- Replace the hashes with the actual data. *Please do not take this too literally.*
-		7. Print all students.
+		3. Implement a `-o` flag to specify an output file name. By default, the output file should be called `composite_student_list.txt`.
+		4. Implement a `-i` flag for Node insertion. This flag should support two(2) or one (1) argument(s). If only one argument is passed in, it should 		             first, check to see if a file named `composite_student_list.txt` exisits. If it does, it appends a node at the end of the list generated 				 from the file and it updates the file. Ensure that the student doesn't already exisit in the list before appending. If only one argument 			     is passed, it should function in the same manner as the `-f` flag.
+		5. Implement a `-d` flag. This command line option should delete a student node by name in the list generated from `composite_student_list.txt`.
+		6. Implement a `-h` flag which prints the programs usage. 
+		7. In the event of an invalid or insufficient command line, print the programs usage.
+	
 4. Dynamically allocate students and nodes with `calloc`.
 5. Read and internalize the warnings.
 6. Test all of your functions in `main`.
