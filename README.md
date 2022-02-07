@@ -88,17 +88,17 @@ int main(){
 			- ```Student Name: #####\nGPA: #####\nTotal credits: ####```
 				- Replace the hashes with the actual data. 
 	- Implement a function to print the contents of the list with the following format:
-		``` 
+		``` 		
 		Name
 		GPA
 		Total credits
-		
+		\n
 		Name
 		GPA
 		Total credits
 		...
+		```	
 		
-		```
 	The default file name for the ouput file should be `composite_student_list.txt` unless otherwise specified by the user through the command line (more on this later). 
 	- 
 	- In this lab, you will be utilizing the command line to pass in flags (or options) to your program for performing a variety of tasks.
