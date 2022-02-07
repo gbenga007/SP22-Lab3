@@ -71,7 +71,8 @@ int main(){
 
 1. Read and internalize the warnings.
 2. Create a `main.cpp` OR `main.cc` file. **N.B**: The C++ compiler recognizes either extension for Cplusplus source code files.
-	- Include the `argc` and `argv` arguments. For this assignment, you will be reading the node data from a text file called `students.txt`. Use the command line args to pass in the file name.  
+	- Include the `argc` and `argv` arguments for the main function. For this assignment, you will be reading the node data from a text file.
+	- Use the command line arguments to pass in the file name **more on this later..**.  
 3. Create a header and implementation file for a studentList. 
 	- Define a C++ class for a student Node following the above example.
 	- Your class should include a default constructor which just creates an instance of the class with all data members set to null.
@@ -98,25 +99,25 @@ int main(){
 		...
 		
 		```
-	The default file name for the ouput file should be `composite_student_list.txt` unless specified by the user through the command line (more on this later). 
+	The default file name for the ouput file should be `composite_student_list.txt` unless otherwise specified by the user through the command line (more on this later). 
 	- 
-	- In this lab, you will be utilizing the command line to pass in flags or options to your program for performing a variety of tasks.
+	- In this lab, you will be utilizing the command line to pass in flags (or options) to your program for performing a variety of tasks.
 		1. Implement a `-f` flag to specify a single student file ID to be read into memory. 
-			 - For example `./prog -f 1` this will load data from the file entitled `student_1.txt` into a node and write the list to a file named 				  `composite_student_list.txt`.
+			 - For example `./prog -f student_1.txt` this will load data from the file entitled `student_1.txt` into a node and write the list to a 			   file named `composite_student_list.txt`.
 		2. Implement a `-r` flag to specify a range of student file ID's to be read into memory.
 			 - For example `./prog -r 1-5` this will load data from the files entitled `student_1.txt` through `student_5.txt` into independent nodes 			     which will be linked together. 
 		3. Implement a `-o` flag to specify an output file name. By default, the output file should be called `composite_student_list.txt`.
 		4. Implement a `-i` flag for Node insertion. This flag should support two(2) or one (1) argument(s). If only one argument is passed in, it should 		             first, check to see if a file named `composite_student_list.txt` exisits. If it does, it appends a node at the end of the list generated 				 from the file and it updates the file. Ensure that the student doesn't already exisit in the list before appending. If only one argument 			     is passed, it should function in the same manner as the `-f` flag.
 		5. Implement a `-d` flag. This command line option should delete a student node by name in the list generated from `composite_student_list.txt`.
 		6. Implement a `-h` flag which prints the programs usage. 
-		7. In the event of an invalid or insufficient command line, print the programs usage.
+		7. In the event of an invalid or insufficient command line, print a meaningful error message such as `-q` flag is not supported **OR** `-f` flag 		   expects an accompanying file name for read.  print the programs usage.
 	
-4. Dynamically allocate students and nodes with `calloc`.
+4. Dynamically allocate students and nodes with C++'s `new` keyword.
 5. Read and internalize the warnings.
 6. Test all of your functions in `main`.
-7. Verify that you may give your program an integer argument to delete students from the doubly linked list. prove that it works.
-8. Add error handling, such as if-else statements that use `std::cout` to write warnings to the console.
-10. Paste your terminal output from the assignment onto the end of this document.
+7. Add **ROBUST** error handling to deal with the command line input!!
+8. Paste your terminal output from the assignment onto the end of this document. Displaying test cases for each command line arguments.
+9. Print meaningful error messages to standard out. Such as ```c++ std::cout << "Could not delete student `" << student << "` . The student does not exist!"<< std::endl; ```
 		
 		
 # 🌟Bonus Points🌟
