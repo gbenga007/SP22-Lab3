@@ -78,9 +78,9 @@ int main(){
 	- Since, the data for the Linked List will be read in from a file, you should also implement a constructor which takes in a file name as a parameter. 
 		- This constructor should go through every student in the file and create and link a node for each respective student.
 	- Each student file will follow this format:
-		Name
-		GPA
-		Total credits
+		` Name
+		  GPA
+		  Total credits`
 	- Implement a function to print list to standard out.
 	- Implement a function to print the contents of the list with the following format:
 		Name
