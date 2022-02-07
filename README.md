@@ -20,7 +20,38 @@ class StudentNode{
 
 ## File I/O in C++
 Consult the <a href="https://www.cplusplus.com/reference/fstream/ifstream/">ifstream</a> and  <a href="https://www.cplusplus.com/reference/fstream/ofstream/ofstream/">ofstream</a> reference page for C++ File I/O.
+An example: 
 
+```c++
+#include <fstream>
+
+int main(){
+	
+	std::ifstream ifs;
+	ifs.open("myfile.bin", ios::in | ios::binary); 
+	// This will open a file named `myfile.txt' 
+	// `ios::in` -- this sets up the stream for input operations -- 
+	// `ios::binary` -- this opens the file in binary mode.
+	
+	if( ifs.is_open() ){ // returns a bool value to validate whether or not the stream object is associated with an open file.
+	 // Let's read in some data.
+	 int num; // assuming we have some integer value to read in.
+	 ifs >> num; // We use the stream extraction operator `>>` to extract data from the stream.
+	  // The fstream object has a set of flags we can query to check if read-write operations were succesful.
+	 
+	   /* 1.) badbit - checked with ifs.bad() - This returns true if reading or writing operations fail. The failure here is with regards to
+	      The buffer associated with the stream. In other words, if we try to write to a file that is not open for writing or if we attempt
+	       writing to a device that has no space left.
+	       
+	`.    2.) Failbit - checked with ifs.fail() -
+	
+	}
+	
+
+	return 0;
+}
+
+```
 
 # Instructions 
 - Make commits as often as necessary, with self-contained bits of code rather than large blobs. ***You do not need to push after each commit.***
