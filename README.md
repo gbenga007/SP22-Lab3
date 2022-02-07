@@ -81,14 +81,14 @@ int main(){
 		``` 
 		Name
 		GPA
-	        Total credits
+		Total credits
 		```
 	- Implement a function to print list to standard out.
 	- Implement a function to print the contents of the list with the following format:
 		``` 
 		Name
 		GPA
-	        Total credits
+		Total credits
 		
 		Name
 		GPA
